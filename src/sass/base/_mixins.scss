@@ -1,0 +1,11 @@
+@mixin Merriweather {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin tree {
+    height: 1px;
+    background-color: #FFDF9E;
+    max-width: 890px;
+}

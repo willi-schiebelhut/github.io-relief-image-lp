@@ -1,0 +1,71 @@
+.landscape {
+    min-height: 1160px;
+    padding-top: 65px;
+
+    // .landscape__wrapper
+
+    &__wrapper {
+    }
+
+    // .landscape__descr
+
+    &__descr {
+        width: 100%;
+        min-height: 99px;
+        background: #5A554D;
+        border-radius: 5px;
+        padding: 15px 54px 20px 20px;
+        margin-top: 40px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        color: #FFDF9E;
+        font-weight: $light;
+
+    }
+
+    // .landscape__grid
+
+    &__grid {
+        margin-top: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 25px;
+    }
+
+    // .landscape__title
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    // .landscape__img
+
+    &__img {
+        width: 335px;
+        height: 189px;
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+.container-outer {
+}
+.container-inner {
+}
+.title {
+}
+.lanscape {
+
+    // .lanscape__text
+
+    &__text {
+    }
+}
+.landscape-card {
+}

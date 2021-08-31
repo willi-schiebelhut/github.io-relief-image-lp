@@ -1,0 +1,183 @@
+.hero {
+    background: url('../../img/hero/hero.jpg') center (center / cover) no-repeat;
+    min-height: 746px;
+    // .hero__wrapper
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 100px;
+    }
+
+    // .hero__titles
+
+    // .hero__title
+
+    &__title {
+        max-width: 430px;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        font-weight: $light;
+    }
+
+    // .hero__button
+
+    &__button {
+        width: 340px;
+        height: 60px;
+        background: rgba(255, 126, 53, 0.53);
+        border: 2px solid #FF7E35;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25), inset 9px 9px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFDF9E;
+        text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+        font-weight: $light;
+        margin-top: 45px;
+
+
+    }
+
+    // .hero__social
+
+    &__social {
+        margin-right: 4px;
+        height: 128px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    // .hero__advantages
+
+    &__advantages {
+        position: relative;
+        bottom: -60px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: rgba(33, 26, 21, 0.87);
+        border-radius: 5px;
+        min-height: 122px;
+        padding: 25px 0;
+    }
+
+    // .hero__advantages-item
+
+    &__advantages-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__advantages-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+    }
+
+    // .hero__advantages-icons
+
+    &__advantages-icons {
+        width: 80px;
+        height: 80px;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    // .hero__advantages-title
+
+    &__advantages-title {
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFDF9E;
+        font-weight: $light;
+    }
+}
+.header {
+    background-color: rgba(37, 73, 31, 0.31);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(10px);
+    height: 48px;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+}
+.main-navigation {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    // .main-navigation__link
+
+    &__link {
+        font-weight: $light;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        & {
+            margin-right: 88px;
+        }
+    }
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    // .contacts__phone
+
+    &__phone {
+        font-size: 14px;
+        line-height: 113.19%;
+        letter-spacing: 0.03em;
+        color: #FFDF9E;
+        text-decoration: none;
+        font-weight: $light;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            display: block;
+            background: url('../../icons/contacts/phone.svg') center (center / cover) no-repeat;
+            width: 11px;
+            height: 11px;
+            margin-right: 8px;
+        }
+
+    }
+
+    // .contacts__geo
+
+    &__geo {
+        font-size: 14px;
+        line-height: 113.19%;
+        letter-spacing: 0.03em;
+        color: #FFDF9E;
+        text-decoration: none;
+        font-weight: $light;
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            display: block;
+            background: url('../../icons/contacts/geo.svg') center (center / cover) no-repeat;
+            width: 11px;
+            height: 11px;
+            margin-right: 8px;
+        }
+    }
+}
+.logo {
+    max-width: 267px;
+    height: 204px;
+}

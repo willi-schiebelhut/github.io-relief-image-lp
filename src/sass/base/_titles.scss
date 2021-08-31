@@ -1,0 +1,8 @@
+.title {
+    @include Merriweather;
+    font-size: 18px;
+    line-height: 23px;
+    color: #34642C;
+    font-weight: $regular;
+    text-transform: uppercase;
+}

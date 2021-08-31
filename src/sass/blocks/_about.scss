@@ -1,0 +1,53 @@
+.about {
+    min-height: 435px;
+    padding: 145px 0 50px 0;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url('../../img/tree.png') center (center / cover) no-repeat;
+        width: 229px;
+        height: 373px;
+        left: -19px;
+        z-index: -1;
+    }
+    // .about__wrapper
+
+    &__wrapper {
+        background: rgba(87, 82, 73, 0.98);
+        border-radius: 5px;
+        padding: 20px 40px 15px 20px;
+    }
+
+    // .about__title
+
+    &__title {
+        color: #FFDF9E;
+    }
+
+    // .about__text
+
+    &__text {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+        letter-spacing: 0.1em;
+        font-weight: $light;
+        span {
+            font-weight: $regular;
+        }
+
+color: #FFDF9E;
+    }
+}
+.container-outer {
+}
+.container {
+
+    // .container__inner
+
+    &__inner {
+    }
+}

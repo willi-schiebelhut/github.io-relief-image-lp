@@ -1,0 +1,62 @@
+@import 'libs/reset-custom';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto:wght@300;400;500&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/titles';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.container-outer {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+@import 'blocks/hero';
+@import 'blocks/about';
+@import 'blocks/projects';
+@import 'blocks/care';
+@import 'blocks/landscape';
+@import 'blocks/feedbacks';
+@import 'blocks/footer';
+@import 'blocks/modals';
+
+// @media(max-width: 1520px) {
+//     .container-inner {
+//         max-width: 1400px;
+//     }   
+// }
+// @media(max-width: 1439px) {
+//     .container-inner {
+//         max-width: 1200px;
+//     }   
+// }
+// @media (max-width: 1200px) {
+//     .container-inner {
+//         max-width: 960px;
+//     }
+// }
+@media (max-width: 991.98px) {
+    .container-inner {
+        max-width: 720px;
+    }
+}
+@media (max-width: 767.98px) {
+    .container-inner {
+        max-width: 540px;
+    }
+}
+@media (max-width: 575.98px) {
+    .container-inner {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
