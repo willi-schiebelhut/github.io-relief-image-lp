@@ -1,5 +1,5 @@
 .overlay {
-    display: block;
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -8,6 +8,7 @@
     z-index: 99;
 }
 .modal {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -89,7 +90,7 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
-
+                  cursor: pointer;
 		}
 }
 .form {
@@ -106,4 +107,41 @@
             margin-top: 20px;
       }
 
+}
+
+::-webkit-input-placeholder {
+      color: #000000
+  }
+  
+  ::-moz-placeholder {
+      color: #000000
+  }
+  
+  :-ms-input-placeholder {
+      color: #000000
+  }
+  
+  :-moz-placeholder {
+      color: #000000
+  }
+
+.policy {
+    display: none;
+    position: absolute;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    overflow-x: scroll;
+    &__close {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+    }
 }

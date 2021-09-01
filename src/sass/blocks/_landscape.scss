@@ -3,8 +3,31 @@
     padding-top: 65px;
 
     // .landscape__wrapper
-
-    &__wrapper {
+    &__intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &-divider {
+            width: 85%;
+            height: 1px;
+            background-color: #34642c;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            &::before {
+                content: '';
+                display: block;
+                position: relative;
+                background: url('../../icons/intro.svg') center (center / cover) no-repeat;
+                width: 42.7px;
+                height: 35.88px;
+                top: -35px;
+            }
+        }
+    }
+    &__main-title {
+        position: relative;
     }
 
     // .landscape__descr
@@ -46,7 +69,7 @@
     // .landscape__img
 
     &__img {
-        width: 335px;
+        max-width: 335px;
         height: 189px;
         img {
             object-fit: cover;
@@ -68,4 +91,78 @@
     }
 }
 .landscape-card {
+}
+
+
+//Media
+
+@media (max-width: 991.98px) {
+    .landscape {
+        &__main-title {
+            width: 20%;
+        }
+        &__descr {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .landscape {
+        &__intro {
+            flex-direction: column-reverse;
+            &-divider {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &__main-title {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+        &__mobile-hidden {
+            display: none;
+        }
+        &__title {
+            font-weight: $light;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .landscape {
+        min-height: 700px;
+        padding-top: 20px;
+        &__intro {
+            &-divider {
+                width: 80%;
+                &::before {
+                     width: 20px;
+                    height: 20px;
+                    top: -20px;
+                }
+               
+            }
+        }
+        &__grid {
+            display: block;
+        }
+        &__descr {
+            padding: 9px;
+            font-size: 12px;
+        }
+        &__img {
+            height: 100px;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        &__title {
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 5px;
+        }
+    }
 }

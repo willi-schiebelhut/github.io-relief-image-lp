@@ -1,21 +1,48 @@
 .feedbacks {
     min-height: 590px;
     padding: 75px 0;
+    &__intro {
+        margin: 40px auto;
+        position: relative;
+        &-divider {
+            max-width: 340px;
+            height: 1px;
+            background-color: #34642c;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &::before {
+                content: '';
+                display: block;
+                position: relative;
+                background: url('../../icons/intro.svg') center (center / cover) no-repeat;
+                width: 42.7px;
+                height: 35.88px;
+                top: -35px;
+            }
+        }
+    }
 
     &__title {
         text-align: center;
+        position: relative;
+        margin-top: 13px;
     }
     // .feedbacks__slider
 
     &__slider {
         margin-top: 60px;
+        min-height: 312px;
+        width: 100%;
+
     }
 
     // .feedbacks__slider-wrapper
 
     &__slider-wrapper {
         display: flex;
-        column-gap: 25px;
+        min-width: 0;
     }
 
     // .feedbacks__slide
@@ -24,7 +51,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 335px;
+        width: 335px;
+        cursor: grab;
     }
 
     // .feedbacks__slide-img
@@ -57,22 +85,65 @@
         text-align: justify;
         color: #34642C;
     }
-}
-.container-outer {
-}
-.container-inner {
-}
-.title {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
+    &__pagination {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 }
 .swiper-button-prev {
 }
 .swiper-button-next {
+}
+
+//Media
+@media (max-width: 575.98px) {
+    .feedbacks {
+        position: relative;
+        &::after {
+            content: '';
+            background: url('../../img/tree-mobile.png') center (center / cover) no-repeat;
+            display: block;
+            width: 220px;
+            height: 325px;
+            right: 0;
+            position: absolute;
+            bottom: 40px;
+            
+        }
+    }
+    .feedbacks__intro-divider {
+        width: 50%;
+    }
+    .feedbacks__slide {
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: rgba(239, 239, 239, 0.61);
+        padding: 10px 8px 8px 8px;
+        &-text {
+            color: #000000;
+            font-weight: $light;
+        }
+        &-title {
+            margin-top: 0;
+            margin-left: 30px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .feedbacks {
+        padding: 30px 0;
+        &__intro {
+            &-divider {
+                width: 80%;
+                &::before {
+                     width: 20px;
+                    height: 20px;
+                    top: -20px;
+                }
+               
+            }
+        }
+    }
 }

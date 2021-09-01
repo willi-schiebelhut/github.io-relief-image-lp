@@ -1,6 +1,10 @@
+.hamburger {
+    display: none;
+}
 .hero {
     background: url('../../img/hero/hero.jpg') center (center / cover) no-repeat;
     min-height: 746px;
+    position: relative;
     // .hero__wrapper
 
     &__wrapper {
@@ -27,7 +31,10 @@
     // .hero__button
 
     &__button {
-        width: 340px;
+        max-width: 340px;
+        padding: 18px 65px;
+        display: flex;
+        align-items: center;
         height: 60px;
         background: rgba(255, 126, 53, 0.53);
         border: 2px solid #FF7E35;
@@ -39,8 +46,7 @@
         text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
         font-weight: $light;
         margin-top: 45px;
-
-
+        cursor: pointer;
     }
 
     // .hero__social
@@ -85,7 +91,11 @@
     &__advantages-icons {
         width: 80px;
         height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
+            width: 100%;
             object-fit: cover;
         }
     }
@@ -147,7 +157,7 @@
         &::before {
             content: '';
             display: block;
-            background: url('../../icons/contacts/phone.svg') center (center / cover) no-repeat;
+            background: url('../../icons/advantages/phone.svg') center (center / cover) no-repeat;
             width: 11px;
             height: 11px;
             margin-right: 8px;
@@ -180,4 +190,206 @@
 .logo {
     max-width: 267px;
     height: 204px;
+}
+
+
+//Media
+
+@media (max-width: 1199.98px) {
+    .main-navigation {
+        &__link {
+            margin-right: 65px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main-navigation {
+        &__link {
+            margin-right: 40px;
+        }
+    }
+    .contacts {
+        &__phone, &__geo {
+            font-size: 13px;
+        }
+    }
+    .hero {
+        &__button {
+            max-width: 280px;
+            padding: 15px 45px;
+        }
+        &__advantages {
+            bottom: -100px;
+        }
+        &__title {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        &__title {
+            font-size: 25px;
+            line-height: normal;
+        }
+        &__button {
+            max-width: 250px;
+            padding: 15px 30px;
+            height: 50px;
+        }
+        &__advantages {
+            bottom: -140px;
+            &-title {
+                font-size: 13px;
+            }
+        }
+    }
+        .hamburger {
+            display: block;
+            position: absolute;
+            left: 13px;
+            transform: translateY(-50%);
+            width: 21px;
+            height: 11px;
+            top: 20px;
+            z-index: 99;
+            span {
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: #ffffff;
+                margin-bottom: 4px;
+                transition: 0.5s all;
+                z-index: 99;
+                &-active {
+                    z-index: 99;
+                    span {
+                        margin-bottom: -2px;
+                        &:nth-child(1) {
+                            transform: translateY(3px) rotate(-45deg);
+                            background-color: #fff;
+                        }
+                        &:nth-child(3) {
+                            display: none;
+                        }
+                        &:nth-child(2) {
+                            transform: translateY(3px) rotate(45deg);
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .contacts {
+            flex-direction: column-reverse;
+            &__geo {
+                &::before {
+                    display: none;
+                    align-items: flex-start;
+                }
+            }
+        }
+        .navigation {
+            justify-content: flex-end;
+        }
+        .main-navigation {
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            min-height: 152px;
+            padding: 20px 15px;
+            flex-direction: column;
+            background-color: rgba(36, 69, 30, 0.89);
+            z-index: 10;
+            transition: 0.6s all;
+            margin: 0;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 6px 15px 15px 55px;
+            li {
+                margin-right: 0;
+                font-size: 14px;
+                line-height: 16px;
+                text-transform: uppercase;
+            }
+        }
+    }   
+
+@media (max-width: 575.98px) {
+    .logo {
+        margin-right: 0;
+    }
+    .hero {
+        min-height: 660px;
+        &__title {
+            text-align: center;
+        }
+        &__button {
+            margin: 45px auto;
+        }
+        &__wrapper {
+            margin-top: 55px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__titles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__advantages {
+            display: none;
+        }
+        &__social {
+            flex-direction: row;
+            height: 100%;
+            a {
+                &:not(:last-child) {
+                margin-right: 13px;
+            }
+            }
+            
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            background: url('../../img/footer-bg.svg') center (center / cover) no-repeat;
+            height: 70px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 99;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .hero {
+        min-height: 580px;
+        &__title {
+            font-size: 14px;
+            margin-top: -40px;
+        }
+        &__button {
+            width: 177px;
+            height: 29px;
+            font-size: 14px;
+        }
+        &__social {
+            margin-top: 100px;
+            img {
+                width: 20px;
+            }
+        }
+    }
+    .logo {
+        width: 170px;
+        height: 165px;
+    }
 }

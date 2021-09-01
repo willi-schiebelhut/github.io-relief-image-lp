@@ -1,6 +1,31 @@
 .projects {
     min-height: 685px;
     padding-bottom: 80px;
+    &__intro {
+        display: flex;
+        align-items: flex-end;
+        &-divider {
+            width: 80%;
+            height: 1px;
+            background-color: #34642c;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            &::before {
+                content: '';
+                display: block;
+                position: relative;
+                background: url('../../icons/intro.svg') center (center / cover) no-repeat;
+                width: 42.7px;
+                height: 35.88px;
+                top: -35px;
+            }
+        }
+    }
+    &__title {
+        position: relative;
+    }
 
     // .projects__wrapper
 
@@ -18,6 +43,11 @@
         display: flex;
         align-items: flex-end;
         cursor: pointer;
+        transition: .4s all;
+        &:hover {
+            box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.25);
+            transition: .4s all;
+        }
         &:nth-child(1) {
             background: url('../../img/projects/pravdinskoe.jpg') center (center / cover) no-repeat;
             grid-row: 1 / 3;
@@ -42,5 +72,92 @@
         font-size: 18px;
         line-height: 21px;
         color: #3D2220;
+    }
+}
+
+//Media
+
+@media (max-width: 991.98px) {
+    .projects {
+        min-height: 620px;
+        &__title {
+            width: 25%;
+        }
+        &__wrapper {
+            grid-template-rows: repeat(2, 230px);
+        }
+        &__item-title {
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .projects {
+        &__title {
+            margin-bottom: -5px;
+        }
+        &__item {
+            &-title {
+                height: 40px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .projects {
+        &__title {
+            order: 2;
+            text-align: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+        &__intro {
+            flex-direction: column;
+            align-items: center;
+            &-divider {
+                display: flex;
+                justify-content: center;
+                order: 1;
+            }
+        }
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 333px 100px;
+        }
+        &__item {
+            &:nth-child(1) {
+                grid-column: 1/3;
+                grid-row: 1/2;
+            }
+            &-title {
+                height: 32px;
+                color: #34642C;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .projects {
+        padding-bottom: 30px;
+        min-height: 400px;
+        &__intro {
+            &-divider {
+                &::before {
+                     width: 20px;
+                    height: 20px;
+                    top: -20px;
+                }
+               
+            }
+        }
+        &__item-title {
+            &:nth-child(2) {
+                height: 18px;
+            }
+        }
     }
 }

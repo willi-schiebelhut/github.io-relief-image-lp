@@ -2,6 +2,28 @@
     min-height: 435px;
     padding: 145px 0 50px 0;
     position: relative;
+    &__intro {
+        margin: 40px auto;
+        position: relative;
+        &-divider {
+            max-width: 340px;
+            height: 1px;
+            background-color: #34642c;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &::before {
+                content: '';
+                display: block;
+                position: relative;
+                background: url('../../icons/intro.svg') center (center / cover) no-repeat;
+                width: 42.7px;
+                height: 35.88px;
+                top: -35px;
+            }
+        }
+    }
     &::before {
         content: '';
         display: block;
@@ -9,7 +31,8 @@
         background: url('../../img/tree.png') center (center / cover) no-repeat;
         width: 229px;
         height: 373px;
-        left: -19px;
+        left: 0;
+        top: 55px;
         z-index: -1;
     }
     // .about__wrapper
@@ -42,12 +65,80 @@
 color: #FFDF9E;
     }
 }
-.container-outer {
+.arrow-down {
+    display: none;
 }
-.container {
 
-    // .container__inner
+//Media
 
-    &__inner {
+@media (max-width: 1200px) {
+    .about {
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: url('../../img/tree.png') center (center / cover) no-repeat;
+            width: 145px;
+            height: 273px;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about {
+        padding-top: 100px;
+        &__text {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about {
+        &__text {
+            font-size: 12px;
+        }
+        &__wrapper {
+            padding: 15px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about {
+        padding-top: 40px;
+        &::before {
+            display: none;
+        }
+        &__intro {
+            &-divider {
+                width: 50%;
+            }
+        }
+    }
+    .mobile__hidden {
+        display: none;
+    }
+    .arrow-down {
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .about {
+        &__intro {
+            &-divider {
+                width: 80%;
+                &::before {
+                     width: 20px;
+                    height: 20px;
+                    top: -20px;
+                }
+               
+            }
+        }
     }
 }

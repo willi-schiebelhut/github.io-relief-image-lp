@@ -17,6 +17,9 @@
     // .footer__wrapper
     &__title {
         color: #FFFFFF;
+        &-mobile {
+            display: none;
+        }
     }
     &__wrapper {
         display: flex;
@@ -28,9 +31,7 @@
 
     // .footer__phone
 
-    &__phone {
-        margin-bottom: 13px;
-    }
+
 
     // .footer__phone-title
 
@@ -65,7 +66,7 @@
     // .footer__email
 
     &__email {
-        margin-bottom: 13px;
+        margin-bottom: -5px;
     }
 
     // .footer__email-title
@@ -132,9 +133,72 @@
         }
     }
 }
-.container-outer {
+
+@media (max-width: 767.98px) {
+    .footer {
+        min-height: 350px;
+        &__wrapper {
+            align-items: flex-end;
+        }
+    }
 }
-.container-inner {
-}
-.title {
+
+@media (max-width: 575.98px) {
+    .footer {
+        padding-top: 12px;
+        min-height: 150px;
+        &::after {
+            height: 40px;
+        }
+        &__title {
+            display: none;
+            &-mobile {
+                display: block;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+        &__phone {
+            a {
+                font-size: 12px;
+                font-weight: $light;
+            }
+        }
+        &__phone-title {
+            display: none;
+        }
+        &__email {
+            display: none;
+        }
+        &__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        &__address {
+            order: 1;
+            font-size: 12px;
+
+        }
+        &__contacts {
+            flex-direction: row;
+        }
+        &__contacts-social {
+            order: 2;
+            margin-left: 30px;
+            img {
+                width: 20px;
+            }
+        }
+        &__social-instagram {
+            margin-right: 10px;
+        }
+        &__social-whatsapp {
+            margin-right: 10px;
+        }
+        &__social {
+            height: 100%;
+            
+        }
+    }
 }
