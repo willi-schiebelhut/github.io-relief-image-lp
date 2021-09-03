@@ -41,6 +41,7 @@
         background: rgba(87, 82, 73, 0.98);
         border-radius: 5px;
         padding: 20px 40px 15px 20px;
+        transition: .3s all;
     }
 
     // .about__title
@@ -67,8 +68,16 @@ color: #FFDF9E;
 }
 .arrow-down {
     display: none;
+    transition: .3s all;
 }
 
+.transform {
+    transform: rotate(180deg);
+}
+
+.transition {
+    transition: .4s all;
+}
 //Media
 
 @media (max-width: 1200px) {
@@ -117,13 +126,16 @@ color: #FFDF9E;
                 width: 50%;
             }
         }
+        &__wrapper {
+            padding-bottom: 5px;
+        }
     }
     .mobile__hidden {
         display: none;
     }
     .arrow-down {
         display: block;
-        margin: 20px auto;
+        margin: 5px auto;
     }
 }
 

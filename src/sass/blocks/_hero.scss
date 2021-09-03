@@ -26,6 +26,7 @@
         letter-spacing: 0.03em;
         color: #FFFFFF;
         font-weight: $light;
+        text-transform: inherit;
     }
 
     // .hero__button
@@ -62,7 +63,7 @@
 
     &__advantages {
         position: relative;
-        bottom: -60px;
+        bottom: -100px;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -263,6 +264,7 @@
                 margin-bottom: 4px;
                 transition: 0.5s all;
                 z-index: 99;
+            }
                 &-active {
                     z-index: 99;
                     span {
@@ -280,7 +282,7 @@
                         }
                     }
                 }
-            }
+            
         }
         .contacts {
             flex-direction: column-reverse;
@@ -310,12 +312,15 @@
             margin: 0;
             align-items: flex-start;
             justify-content: space-between;
-            padding: 6px 15px 15px 55px;
+            padding: 9px 15px 15px 55px;
             li {
                 margin-right: 0;
                 font-size: 14px;
                 line-height: 16px;
                 text-transform: uppercase;
+            }
+            &-active {
+                left: 0;
             }
         }
     }   

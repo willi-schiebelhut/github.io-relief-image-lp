@@ -14,6 +14,7 @@
 .container-inner {
     max-width: 1060px;
     margin: 0 auto;
+    position: relative;
 }
 
 .container-outer {
@@ -28,6 +29,8 @@
 @import 'blocks/feedbacks';
 @import 'blocks/footer';
 @import 'blocks/modals';
+@import 'blocks/gallery';
+@import 'blocks/gallery-slider';
 
 @media (max-width: 1199.98px) {
     .container-inner {

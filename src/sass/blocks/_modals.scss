@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 99;
 }
@@ -19,6 +20,14 @@
     background-color: rgba(33, 26, 21, 0.76);
     border-radius: 5px;
     // padding: 45px;
+    &__close {
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          cursor: pointer;
+    }
 }
 .feedback-form {
 
@@ -33,6 +42,8 @@
 		&__logo {
             background-color: #FFDF9E;
             max-width: 255px;
+            display: flex;
+            align-items: center;
             // filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.4));
 		}
 
@@ -68,7 +79,8 @@
                   color: #FFFFFF;
                   margin-right: 5px;
                   margin-left: 10px;
-                  a {
+                  cursor: pointer;
+                  span {
                         text-decoration-line: underline;
                         color: #FFDF9E;
                   }
@@ -109,6 +121,36 @@
 
 }
 
+.checkbox {
+      &:checked + .checkbox__label::after {
+            transform: scale(1);
+      }
+      &__label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // align-items: flex-end;
+            position: relative;
+            &::before {
+                  content: '';
+                  height: 15px;
+                  width: 15px;
+                  background-color: #fff;
+            }
+            &::after {
+                  content: '';
+                  width: 10px;
+                  height: 10px;
+                  position: absolute;
+                  top: 2px;
+                  left: 2px;
+                  cursor: pointer;
+                  background: url('../../icons/done.svg') center (center / cover) no-repeat;
+                  transform: scale(0);
+            }
+      }
+}
+
 ::-webkit-input-placeholder {
       color: #000000
   }
@@ -128,7 +170,7 @@
 .policy {
     display: none;
     position: absolute;
-    padding: 30px;
+    padding: 50px 20px 20px 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -144,4 +186,87 @@
           height: 25px;
           cursor: pointer;
     }
+}
+
+label.error {
+     color: red;
+}
+
+.loader {
+      width: 12px;
+      height: 12px;
+      display: none;
+      margin-left: 7px;
+}
+
+//Media 
+
+@media (max-width: 991.98px) {
+      .feedback-form {
+            max-width: 90%;
+            &__policy-text {
+                  font-size: 10px;
+            }
+      }
+}
+
+@media (max-width: 767.98px) {
+      .feedback-form {
+            &__form {
+                  padding: 30px;
+            }
+            &__logo {
+                  display: none;
+            }
+            &__wrapper {
+                  justify-content: center;
+            }
+            &__title {
+                  text-transform: uppercase;
+            }
+      }
+}
+
+@media (max-width: 575.98px) {
+      .form {
+            margin-top: 17px;
+            input {
+                  font-size: 13px;
+            }
+      }
+      .form .phone {
+            margin-top: 13px;
+      }
+      .feedback-form {
+            border: 3px solid #FFFFFF;
+            min-height: 253px;
+            &__title {
+                  font-size: 12px;
+                  font-weight: $light;
+            }
+            &__policy {
+                  flex-wrap: wrap-reverse;
+                  justify-content: center;
+                  margin-top: 13px;
+                  align-items: flex-start;
+                  &-text {
+                        margin-top: 13px;
+                  }
+            }
+            &__button {
+                  min-width: 100%;
+                  height: 35px;
+            }
+            &__form {
+                  padding: 35px 15px 15px 15px;
+            }
+      }
+      .checkbox {
+            &__label {
+                  align-items: flex-end;
+                  &::after {
+                        top: 16px;
+                  }
+            }
+      }
 }

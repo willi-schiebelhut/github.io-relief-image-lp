@@ -1,0 +1,103 @@
+.gallery {
+    display: none;
+    width: 1215px;
+    height: 615px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    &__slide {
+        padding: 35px 65px;
+        width: 100%;
+        background: #504B47;
+        border: 5px solid #FFFFFF;
+        position: relative;
+        &-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+        &-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-descr {
+            width: 45%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            
+        }
+        &-total {
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFDF9E;
+            margin-left: 15px;
+        }
+        &-point {
+            list-style: none;
+        }
+        &-point {
+            font-size: 14px;
+            line-height: 16px;
+            text-align: justify;
+            color: #FFDF9E;
+            margin-bottom: 20px;
+            font-weight: $light;
+            display: flex;
+            align-items: center;
+            &::before {
+                content: '';
+                display: block;
+                width: 4px;
+                height: 4px;
+                background-color: #FF7E35;
+                border-radius: 100%;
+                margin-right: 10px;
+            }
+        }
+        &-intro {
+            display: flex;
+            align-items: flex-end;
+            &-divider {
+                width: 80%;
+                height: 1px;
+                background-color: #FFDF9E;
+                display: flex;
+                justify-content: flex-end;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: relative;
+                    background: url('../../icons/intro-light.svg') center (center / cover) no-repeat;
+                    width: 42.7px;
+                    height: 35.88px;
+                    top: -35px;
+                }
+            
+        }
+        }
+        &-title {
+            color: #FFDF9E;
+            margin-right: 10px;
+        }
+    }
+} 
+
+.fancybox__gallery {
+    width: 55%;
+    display: flex;
+}
+
+.gallery-button-prev {
+    left: 20px;
+    background: url('../../icons/left-arrow.svg') center (center / cover) no-repeat;
+}
+
+.gallery-button-next {
+    right: 20px;
+    background: url('../../icons/right-arrow.svg') center (center / cover) no-repeat;
+}
